@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Lazy App</title>
+</head>
+
+<body>
+  <!-- Important script. Makes it possible to overwrite "bare imports" inside a library with relative paths. -->
+  <script type="importmap">
+    {
+      "imports": {
+        "solid-js": "./solid-js.js",
+        "solid-js/web": "./solid-js/web.js",
+        "solid-js/html": "./solid-js/html.js"
+      }
+    }
+  </script>
+  <script defer type="module" src="./main.js"></script>
+</body>
+
+</html>
