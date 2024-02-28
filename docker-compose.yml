@@ -2,7 +2,5 @@ services:
   base:
     container_name: lazy
     build: .
-    ports:
-      - "3000:3000" # SolidJS app
     stdin_open: true # docker run -i
     tty: true # docker run -t

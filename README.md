@@ -31,6 +31,11 @@ then it becomes:\
 `dsh lazy`\
 `ddo`
 
+### Frontend app
+Inside the container `cd` into the frontend app directory and run:\
+`npm run dev -- --host`\
+The app will be available on `<container-IP>:3000`.
+
 ## Other Docker commands I always forget
 
 ### Build the image

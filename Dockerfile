@@ -37,14 +37,16 @@ RUN npm install -g pnpm
 WORKDIR /home/app
 
 ## Frontend setup
+RUN npx degit solidjs/templates/ts-minimal frontend-app
 WORKDIR /home/app/frontend-app
-COPY /frontend-app-template/ .
+RUN pnpm install
+# COPY /frontend-app-template/ .
 
 # Download Solid.js library
-RUN mkdir solid-js
-RUN curl -L "https://unpkg.com/solid-js@${SOLIDJS_VERSION}/dist/solid.js" --output /home/app/frontend-app/solid-js/solid.js
-RUN curl -L "https://unpkg.com/solid-js@${SOLIDJS_VERSION}/web/dist/web.js" --output /home/app/frontend-app/solid-js/web.js
-RUN curl -L "https://unpkg.com/solid-js@${SOLIDJS_VERSION}/html/dist/html.js" --output /home/app/frontend-app/solid-js/html.js
+# RUN mkdir solid-js
+# RUN curl -L "https://unpkg.com/solid-js@${SOLIDJS_VERSION}/dist/solid.js" --output /home/app/frontend-app/solid-js/solid.js
+# RUN curl -L "https://unpkg.com/solid-js@${SOLIDJS_VERSION}/web/dist/web.js" --output /home/app/frontend-app/solid-js/web.js
+# RUN curl -L "https://unpkg.com/solid-js@${SOLIDJS_VERSION}/html/dist/html.js" --output /home/app/frontend-app/solid-js/html.js
 
 ## Backend setup
 WORKDIR /home/app/backend-app
