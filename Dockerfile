@@ -9,7 +9,7 @@ RUN echo PS1=\"😪 \\W:$ \" >> ~/.bashrc
 # Define dependency versions
 ARG GOLANG_VERSION=1.22.0
 ARG NODE_VERSION=20
-ARG SOLIDJS_VERSION=1.8.15
+# ARG SOLIDJS_VERSION=1.8.15
 
 # OS update
 RUN apt-get update
@@ -37,7 +37,8 @@ RUN npm install -g pnpm
 WORKDIR /home/app
 
 ## Frontend setup
-RUN npx degit solidjs/templates/ts-minimal frontend-app
+RUN pnpm create vite frontend-app --template solid-ts
+# RUN npx degit solidjs/templates/ts-minimal frontend-app
 WORKDIR /home/app/frontend-app
 RUN pnpm install
 # COPY /frontend-app-template/ .
