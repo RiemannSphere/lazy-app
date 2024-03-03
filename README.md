@@ -2,7 +2,7 @@
 
 This is a basic development setup for a "lazy app". What do we mean by "lazy"?
 1. Write the setup once and use it many times. -> **Docker**
-2. Avoid dependencies, avoid build, minification etc. Frontend code should "just work" in the browser. -> **buildless Solid.js**
+2. Simple and minimalistic frontend. Avoid dependencies, build steps, minification, and what not. Ideally, frontend code should "just work" in the browser. -> **Solid.js + magic**
 3. Single binary for a backend service, simple to write and understand, powerfull standard library, easy deployment. -> **Go**
 4. Easy and cheap deployment. -> **TO BE DECIDED**
 
